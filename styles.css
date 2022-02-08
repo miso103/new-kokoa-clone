@@ -1,5 +1,5 @@
-@import "css/reset.css";
-@import "css/variables.css";
+@import "reset.css";
+@import "variables.css";
 
 /*components*/
 @import "css/compontents/status_bar.css";
@@ -15,11 +15,11 @@
 @import "css/compontents/no_mobile.css";
 /* Screens */
 
-@import "css/login.css";
-@import "css/nikofriends_screen.css";
-@import "css/more.css";
-@import "css/nikosetting.css";
-@import "css/chatting.css";
+@import "login.css";
+@import "nikofriends_screen.css";
+@import "more.css";
+@import "nikosetting.css";
+@import "chatting.css";
 
 .main-screen {
     padding: 0px var(--horizontal-space);
