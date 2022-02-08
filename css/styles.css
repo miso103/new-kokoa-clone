@@ -1,25 +1,25 @@
-@import "css/reset.css";
-@import "css/variables.css";
+@import "/css/reset.css";
+@import "/css/variables.css";
 
 /*components*/
-@import "css/compontents/status_bar.css";
-@import "css/compontents/header.css";
-@import "css/compontents/navigationbar.css";
-@import "css/compontents/nikouser_component.css";
-@import "css/compontents/user_component_chat.css";
-@import "css/compontents/badge.css";
-@import "css/compontents/point.css";
-@import "css/compontents/find_icons.css";
-@import "css/compontents/icon_row.css";
-@import "css/compontents/alt_header.css";
-@import "css/compontents/no_mobile.css";
+@import "/css/compontents/status_bar.css";
+@import "/css/compontents/header.css";
+@import "/css/compontents/navigationbar.css";
+@import "/css/compontents/nikouser_component.css";
+@import "/css/compontents/user_component_chat.css";
+@import "/css/compontents/badge.css";
+@import "/css/compontents/point.css";
+@import "/css/compontents/find_icons.css";
+@import "/css/compontents/icon_row.css";
+@import "/css/compontents/alt_header.css";
+@import "/css/compontents/no_mobile.css";
 /* Screens */
 
-@import "css/login.css";
-@import "css/nikofriends_screen.css";
-@import "css/more.css";
-@import "css/nikosetting.css";
-@import "css/chatting.css";
+@import "/css/login.css";
+@import "/css/nikofriends_screen.css";
+@import "/css/more.css";
+@import "/css/nikosetting.css";
+@import "/css/chatting.css";
 
 .main-screen {
     padding: 0px var(--horizontal-space);
