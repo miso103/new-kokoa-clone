@@ -2,17 +2,17 @@
 @import "variables.css";
 
 /*components*/
-@import "compontents/status_bar.css";
-@import "compontents/header.css";
-@import "compontents/navigationbar.css";
-@import "compontents/nikouser_component.css";
-@import "compontents/user_component_chat.css";
-@import "compontents/badge.css";
-@import "compontents/point.css";
-@import "compontents/find_icons.css";
-@import "compontents/icon_row.css";
-@import "compontents/alt_header.css";
-@import "compontents/no_mobile.css";
+@import "css/compontents/status_bar.css";
+@import "css/compontents/header.css";
+@import "css/compontents/navigationbar.css";
+@import "css/compontents/nikouser_component.css";
+@import "css/compontents/user_component_chat.css";
+@import "css/compontents/badge.css";
+@import "css/compontents/point.css";
+@import "css/compontents/find_icons.css";
+@import "css/compontents/icon_row.css";
+@import "css/compontents/alt_header.css";
+@import "css/compontents/no_mobile.css";
 /* Screens */
 
 @import "login.css";
