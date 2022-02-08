@@ -1,0 +1,378 @@
+#chat-screen {
+    background-color: rgb(149, 210, 235);
+    height: 500vh;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+top: 0px;
+    position: fixed;
+width: 100%;
+box-sizing: border-box;
+background-color: rgb(149, 210, 235);
+}
+
+
+#chat-screen .alt-header {
+    top: 10px;
+    z-index: 1;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+}
+
+
+
+
+.main-chat{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateX(-20px);
+        opacity: 0;}
+    to{
+        transform: none;
+        opacity: 1;} 
+}
+
+.message-row {
+    animation: fadeIn 1s linear;
+}
+
+
+@keyframes fadeInRight {
+    from{
+        transform: translateX(20px);
+        opacity: 0;}
+    to{
+        transform: none;
+        opacity: 1;} 
+}
+
+.message-row--own {
+    animation: fadeInRight 1s linear forwards;
+}
+
+.chatting__timestamp{
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.message-row {
+    display: flex;
+    width: 100%;
+margin-bottom: 25px;
+}
+
+.message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.message_author {
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+.message__bubble {
+    background-color : white;
+    padding: 13px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+}
+
+.message_info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__time,
+.message_author {
+        opacity: 0.8;
+        font-size: 13px;
+}
+
+
+.message-row--own {
+    justify-content: right;
+}
+
+.message-row--own .message__bubble{
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+.message-row--own .message_info {
+    flex-direction: row-reverse;
+}
+
+
+.reply {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: white;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reply__column {
+    align-items: center;
+    position: relative;
+}
+
+.reply__column:first-child {
+    width: 7%;
+}
+
+.reply__column:last-child {
+    width: 93%;
+    position: relative;
+}
+
+.reply i {
+    opacity: 0.5;
+}
+
+.reply__column button {
+    border: var(--main-border);
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+
+.reply__column:last-child button i{
+    opacity: 1;
+}
+
+.reply__column:last-child >i,
+.reply__column:last-child button {
+position: absolute;
+right: -1px;
+top: 5px;
+} 
+
+.reply__column:last-child >i {
+    position: absolute;
+    right: 35px;
+    top: 9px;
+}
+
+.reply__column input {
+    width: 100%;
+    height: 30px;
+    border: var(--main-border);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.reply__column:last-child button {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+
+.reply__column button:focus 
+.reply__column button:active {
+outline: none;
+}
+
+/*
+@keyframes replyFloat {
+    from {
+        transform: none;
+    }
+    to {
+        bottom: 300px;
+
+    }
+} 
+
+.reply:focus-within {
+    bottom: 300px;
+} */
+
+
+.reply__column button, 
+.reply__column i {
+transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column button,
+.reply:focus-within .reply__column i {
+    opacity: 0;
+}
+
+
+.reply input:focus {
+    width: 96vw;
+    transform: translateX(-8%) translateY(-80px); 
+}
+
+.reply:focus-within {
+    transform: translateY(80px);}
+    
+/*
+
+.reply {
+    background-color: white;
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.reply__column {
+    display: flex;
+    background-color:white;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid var(--grey);
+    color: var(--grey);
+    margin-right: 15px;
+}
+
+
+
+
+
+.reply__column-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 4px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.reply__column-input-icon {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.reply__column-input-icon :first-child {
+    color: var(--grey);
+    
+}
+
+.reply__column-input-icon :last-child {
+    background-color: var(--yellow);
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: black;
+}
+
+.reply__column-input input {
+    border: none;
+}
+
+.message-row--own .message__bubble {
+    order: 1;
+}
+
+.message-row--own .message__time {
+    order: 0;
+}
+
+
+.chatting-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chatting-date span {
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 14px;
+    font-size: 13px;
+}
+
+.chat_user-component_text {
+    display: flex;
+    margin-left: 1px;
+}
+
+.chat_user-componet__comment {
+    display: flex;
+    
+}
+
+.chat_user-componet__textandicon {
+    position: relative;
+    }
+
+.chat_user-componet__text {
+    position: absolute;
+    top: 12px;
+    right: 11px;
+
+}
+
+.chat_user-componet__textandicon i {
+    color: white;
+    font-size: 40px;
+    margin-left: -15px;
+}
+
+.chat_user-componet__time {
+    display: flex;
+    margin-top: 25px;
+    font-size: 8px;
+    color: var(--grey);
+}
+
+
+.chat_user-componet__title {
+    margin-left: -15px;
+}
+
+
+.chat_user-component_avatar--sm {
+ width: 45px;
+ height: 45px;
+ border-radius: 50%;
+ margin-bottom: 20px;
+}
+*/

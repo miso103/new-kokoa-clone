@@ -1,0 +1,30 @@
+.open-post__title {
+    font-size: 22px;
+}
+
+.open-post__hashtag {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+
+.open-post__members {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-post__members img {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+}
+
+.open-post__member-count {
+    opacity: 0.5;
+}
+
+.open-post__member-status {
+    color: rgb(253, 85, 189);
+}
